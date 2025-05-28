@@ -1,0 +1,65 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/dtgeo.wp5dtc1/dtc51:
+      branch: ST510101
+      repo: https://gitlab.com/dtgeo.wp5dtc1/dtc51
+      subfolder: DTC51/WF5101/ST510101/src
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-xanthic-seahorse.sh
+        container: qc.acc_fuzzy-orange-crocodile
+  QC.Doc:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-xanthic-tuatara.sh
+        container: qc.doc_homey-dandelion-warthog
+      gitlab.com/dtgeo.wp5dtc1/dtc51 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-wisteria-vulture.sh
+        container: qc.doc_sloppy-ivory-mouse
+  QC.Lic:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-auburn-fish.sh
+        container: qc.lic_snappy-mauve-ferret
+  QC.Sec:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-olivine-flounder.sh
+        container: qc.sec_shaggy-cobalt-monster
+  QC.Sty:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-khaki-armadillo.sh
+        container: qc.sty_beady-chestnut-indri
+      gitlab.com/dtgeo.wp5dtc1/dtc51 jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-taupe-ragdoll.sh
+        container: qc.sty_sickly-lime-dormouse
+  QC.Uni:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 commands:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-puce-civet.sh
+        container: qc.uni_tacky-chartreuse-gerbil
+  QC.Ver:
+    repos:
+      gitlab.com/dtgeo.wp5dtc1/dtc51 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-copper-lemur.sh
+        container: qc.ver_homey-lemon-boar
+timeout: 5400
