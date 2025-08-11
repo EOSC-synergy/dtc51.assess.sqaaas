@@ -16,50 +16,50 @@ sqa_criteria:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 git:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-dandelion-bandicoot.sh
-        container: qc.acc_sloppy-harlequin-neanderthal
+        - /usr/bin/env sh .sqa/script.craggy-platinum-dogfish.sh
+        container: qc.acc_greasy-mustard-baboon
   QC.Doc:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-mustard-kingfisher.sh
-        container: qc.doc_shaky-violet-woodlouse
+        - /usr/bin/env sh .sqa/script.pokey-cobalt-koala.sh
+        container: qc.doc_cloudy-cream-nightingale
       gitlab.com/dtgeo.wp5dtc1/dtc51 git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-malachite-slug.sh
-        container: qc.doc_fuzzy-yellow-oyster
+        - /usr/bin/env sh .sqa/script.boozy-violet-moose.sh
+        container: qc.doc_snoopy-thistle-setter
   QC.Lic:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-peach-balinese.sh
-        container: qc.lic_hilly-denim-reindeer
+        - /usr/bin/env sh .sqa/script.snoopy-brown-dane.sh
+        container: qc.lic_cozy-violet-buzzard
   QC.Sec:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-myrtle-squirt.sh
-        container: qc.sec_randy-asparagus-fousek
+        - /usr/bin/env sh .sqa/script.sickly-indigo-lemur.sh
+        container: qc.sec_wimpy-amethyst-shark
   QC.Sty:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-ruby-tortoise.sh
-        container: qc.sty_craggy-chartreuse-beagle
+        - /usr/bin/env sh .sqa/script.woozy-celadon-uakari.sh
+        container: qc.sty_lanky-asparagus-bongo
       gitlab.com/dtgeo.wp5dtc1/dtc51 jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-cinnamon-peccary.sh
-        container: qc.sty_geeky-yellow-wallaby
+        - /usr/bin/env sh .sqa/script.silly-yellow-deer.sh
+        container: qc.sty_tasty-ultramarine-guppy
   QC.Uni:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 commands:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-cyan-hare.sh
-        container: qc.uni_jumpy-chestnut-beetle
+        - /usr/bin/env sh .sqa/script.leaky-violet-capybara.sh
+        container: qc.uni_cranky-lilac-cuttlefish
   QC.Ver:
     repos:
       gitlab.com/dtgeo.wp5dtc1/dtc51 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-persimmon-hedgehog.sh
-        container: qc.ver_tacky-cerise-grasshopper
+        - /usr/bin/env sh .sqa/script.homely-ruby-hippopotamus.sh
+        container: qc.ver_gimpy-green-toucan
 timeout: 5400
